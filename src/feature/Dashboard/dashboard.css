@@ -1,0 +1,14 @@
+.dashboard{
+    padding: 10px;
+    margin-left: 200px;
+    margin-top: 64px;
+    overflow-x: hidden;
+}
+
+.dashboard h1{
+    font-size: 25px;
+}
+
+.dashboard h2{
+    margin: 50px 0px;
+}

@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+.css-1ygcj2i-MuiTableCell-root{
+  color: white !important;
+}
+
+thead .ant-table-cell{
+  background-color: rgb(141, 148, 107) !important;
+  color: white !important;
+}
+
+thead{
+  background-color: rgb(141, 148, 107);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

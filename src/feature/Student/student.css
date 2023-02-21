@@ -1,0 +1,19 @@
+.infoContainer{
+    display: grid;
+    grid-template-columns: 0.1fr 0.2fr;
+    margin-bottom: 30px;
+}
+
+.infoContainer .info{
+    padding: 20px;
+    background-color: rgb(237, 243, 250);
+}
+
+.infoContainer .info p{
+   color: blue;
+   font-weight: 600;
+}
+
+.infoContainer h1{
+    margin-left: 10px;
+}
