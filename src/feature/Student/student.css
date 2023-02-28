@@ -4,6 +4,15 @@
     margin-bottom: 30px;
 }
 
+.student{
+    height: 100vh;
+    width: 100%;
+}
+
+.infoContainer:hover{
+    cursor: pointer;
+}
+
 .infoContainer .info{
     padding: 20px;
     background-color: rgb(237, 243, 250);
@@ -16,4 +25,23 @@
 
 .infoContainer h1{
     margin-left: 10px;
+}
+
+.student .double-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.student .sameRow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.student .toggle-button{
+    position: relative;
+    right: 200px;
+    display: flex;
+    align-items: center;
 }

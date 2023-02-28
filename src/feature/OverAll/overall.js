@@ -9,12 +9,12 @@ const Overall = () => {
         <TableHead>
           <TableRow>
             <TableCell>Particular</TableCell>
-            <TableCell>Subject 1</TableCell>
-            <TableCell>Subject 2</TableCell>
-            <TableCell>Subject 3</TableCell>
-            <TableCell>Subject 4</TableCell>
-            <TableCell>Subject 5</TableCell>
-            <TableCell>Subject 6</TableCell>    
+            <TableCell>English</TableCell>
+            <TableCell>Math</TableCell>
+            <TableCell>Hindi</TableCell>
+            <TableCell>Physics</TableCell>
+            <TableCell>Math</TableCell>
+            <TableCell>Biology</TableCell>    
           </TableRow>
         </TableHead>
         <TableBody>

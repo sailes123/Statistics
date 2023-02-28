@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Chart from "react-apexcharts";
 
-const BlueGraph = () => {
+const BlueGraph = ({height,width}) => {
     const [state,setState] = useState({
         options: {
           chart: {
@@ -26,7 +26,8 @@ const BlueGraph = () => {
               options={state.options}
               series={state.series}
               type="bar"
-              width="100%"
+              width={width}
+              height={height}
             />
     </div>
   )

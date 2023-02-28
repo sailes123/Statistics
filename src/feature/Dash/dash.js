@@ -1,39 +1,21 @@
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import Dashboard from '../Dashboard/dashboard';
 import GraphGroup from '../GraphGroup/graphGroup';
 import Student from '../Student/student';
+import ZoomBlueGraph from '../ZoomBlueGraph/zoomBlueGraph';
 const { Header, Content, Sider } = Layout;
 
-const menuName = ["OverAll","Student-wise","Overall Chart"];
-const routing = ['/',"student","group"]
-
-const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
-  const key = String(index + 1);
-  return {
-    key: `sub${key}`,
-    icon: React.createElement(icon),
-    label: `subnav ${key}`,
-    children: new Array(4).fill(null).map((_, j) => {
-      const subKey = index * 4 + j + 1;
-      return {
-        key: subKey,
-        label: `option${subKey}`,
-      };
-    }),
-  };
-});
 const Dash = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
     <Layout>
-      <Header className="header"  style={{position:"fixed",width:"100%",zIndex:"10"}}>
+      <Header className="header"  style={{position:"fixed",width:"100%",zIndex:"20"}}>
         <div className="logo"/>
-        {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} items={items1} /> */}
       </Header>
  <Sider
           width={200}
@@ -48,27 +30,19 @@ const Dash = () => {
           }}
         >
           <div style={{ background: 'rgba(255, 255, 255, 0.2)' }} />
-          <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['4']}
-          items={[UserOutlined, UserOutlined,UserOutlined].map(
-            (icon, index,route) => (
-              {
-              key: String(index + 1),
-              icon: React.createElement(UserOutlined),
-              label: menuName[index],
-              onClick: () => {
-                window.location.href = routing[index];
-              }, 
-            }),
-          )}
-        />
+          <Menu theme="dark" mode="inline">
+          <Menu.Item key="1" icon={<UserOutlined />}>
+            <Link to="">Services</Link>
+          </Menu.Item>
+          <Menu.Item key="2" icon={<UserOutlined />}>
+            <Link to="student">Students</Link>
+          </Menu.Item>
+          <Menu.Item key="3" icon={<UserOutlined />}>
+            <Link to="/group">Group</Link>
+          </Menu.Item>
+        </Menu>
         </Sider>
       <Layout>
-       
-        <Layout
-        >
           {/* <Breadcrumb
             style={{
               margin: '16px 0',
@@ -80,16 +54,9 @@ const Dash = () => {
           </Breadcrumb> */}
           <Content
           className="content"
-        >
-          <Routes>
-              <Route path="/" element={<Dashboard/>} />
-              <Route path="/student" element={<Student/>} />
-              <Route path="/group" element={<GraphGroup/>} />
-              
-          </Routes>
-          
+        >        
+        <Outlet/>
           </Content>
-        </Layout>
       </Layout>
     </Layout>
   );
