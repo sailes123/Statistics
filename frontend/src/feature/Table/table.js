@@ -3,6 +3,7 @@ import React from 'react';
 const { Column, ColumnGroup } = Table;
 
 const ExamTable = () => {
+  
     const data = [
         {
           key: '1',

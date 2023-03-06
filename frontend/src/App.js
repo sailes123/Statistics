@@ -8,6 +8,9 @@ import Student from './feature/Student/student';
 import ZoomBlueGraph from './feature/ZoomBlueGraph/zoomBlueGraph';
 import GraphGroup from './feature/GraphGroup/graphGroup';
 import ZoomMixed from './feature/zoomMixed/zoomMixed';
+import Statistics from './feature/Statistics/statistics';
+import Performance from './feature/Performance/performance';
+import FileUploader from './feature/FileUploader/fileUploader';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
          <Route path="student" element={<Student/>} />
          <Route path="group" element={<GraphGroup/>} />
          <Route path="zoomChart/:id" element={<ZoomMixed/>} />
+         <Route path="statistics" element={<Statistics/>} />
+         <Route path="performance" element={<Performance/>} />
+         <Route path="file-upload" element={<FileUploader/>} />
       </Route>  
     </Routes>
   </Router>

@@ -38,7 +38,13 @@ const Dash = () => {
             <Link to="student">Students</Link>
           </Menu.Item>
           <Menu.Item key="3" icon={<UserOutlined />}>
-            <Link to="/group">Group</Link>
+            <Link to="/statistics">Student Statistics</Link>
+          </Menu.Item>
+          <Menu.Item key="4" icon={<UserOutlined />}>
+            <Link to="/performance">Exam Performance</Link>
+          </Menu.Item>
+          <Menu.Item key="5" icon={<UserOutlined />}>
+            <Link to="/file-upload">CSV Uplaoder</Link>
           </Menu.Item>
         </Menu>
         </Sider>

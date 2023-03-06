@@ -1,10 +1,14 @@
-.performance{
+.statistics{
     margin-top: 70px;
     margin-left: 210px;
     background-color: white;
 }
 
-.performance .performanceBox{
+.statistics .filterboxes{
     display: flex;
     flex-wrap: wrap;
+}
+
+.statistics .statistics-table{
+    width: 50%;
 }

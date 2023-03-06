@@ -1,0 +1,39 @@
+.compareBox{
+    display: flex;
+    flex-direction: column;
+    background-color: #f66d00;
+    gap: 5px;
+    height: 56px;
+    width: 300px;
+    margin: 8px;
+    padding-left: 14px;
+}
+
+.compareBox .input{
+    display: flex;
+    gap: 10px;
+}
+
+.compareBox input{
+    background-color: #f66d00;
+    color: white;
+}
+
+.compareBox input:focus{
+    outline: none;
+    color: white;
+}
+
+.compareBox label{
+    font-size: 16px;
+    color: #f1dda1;
+}
+
+.compareBox select{
+    color: #f1dda1;
+    background-color: #f66d00;
+}
+
+.compareBox select:focus{
+    outline: none;
+}
